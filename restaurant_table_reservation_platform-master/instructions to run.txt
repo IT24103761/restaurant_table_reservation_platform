@@ -1,0 +1,48 @@
+full instruction
+----------------
+
+-you need tomcat app,MySQL and mavend(demon)/marven;
+
+-all the java,xml,jsp and dependencies and plugins are extracted and 
+combined in to the "target"file in the folder named as webapp-example.war 
+
+
+-place webapp-example.war file inside tomcat webapps folder.
+
+-then in tomcat ex-[path]- H:\apache-tomcat-10.1.39\bin and click startup file.Then it will run.
+
+-then search in google as http://localhost:8080/webapp-example/
+
+
+each time you edit the file you should compile maven war file and run it as above.
+
+
+then the data enter in website is stored in MySQL.
+--------------------------------------------------
+
+-type cmd in path C:\Program Files\MySQL\MySQL Server 9.2\bin 
+=enter mysql -u root -p in cmd
+-then enter password Aabid2004@
+=Enter USE table_booking
+- ENTER FOLLOWING CODE
+
+-- See all tables
+SHOW TABLES;
+
+-- View all reservations
+SELECT * FROM reservations;
+
+-- View with table details
+SELECT 
+    r.reservation_id,
+    r.customer_name,
+    t.table_number,
+    r.guest_count,
+    r.reservation_date,
+    r.reservation_time
+FROM reservations r
+JOIN tables t ON r.table_id = t.table_id
+ORDER BY r.reservation_date DESC;
+
+
+THEN it will desplay the data of booked tables.
