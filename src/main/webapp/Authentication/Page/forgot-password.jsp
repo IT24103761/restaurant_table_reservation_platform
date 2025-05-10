@@ -38,7 +38,7 @@
         <button type="submit" class="button">Reset Password</button>
     </form>
     <div class="link">
-        <p><a href="../../../login.jsp">Back to Login</a></p>
+        <p><a href="../../login.jsp">Back to Login</a></p>
     </div>
 </div>
 

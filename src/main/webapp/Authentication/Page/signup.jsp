@@ -46,7 +46,7 @@
     <button type="submit" class="button">Sign Up</button>
   </form>
   <div class="link">
-    <p>Already have an account? <a href="../../../login.jsp">Login</a></p>
+    <p>Already have an account? <a href="../../login.jsp">Login</a></p>
   </div>
 </div>
 
