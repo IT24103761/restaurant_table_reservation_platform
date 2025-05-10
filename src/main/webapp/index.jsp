@@ -3,11 +3,69 @@
 <head>
     <title>Amali Restaurant - Table Reservation</title>
     <link rel="stylesheet" href="src/Home/Css/Style.css">
-    <link rel="stylesheet" href="src/Home/Css/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        #showcase
-
+        #showcase {
+            /* Add your showcase styles here */
+        }
+        .login-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: auto; /* This will push it to the right */
+        }
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+        .user-profile {
+            display: flex;
+            align-items: center;
+            margin-left: auto; /* This will push it to the right */
+        }
+        .user-profile img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -22,10 +80,27 @@
                 <li><a href="src/Home/Page/about.jsp"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="src/Home/Page/reservation.jsp"><i class="fas fa-calendar-alt"></i> Reservations</a></li>
                 <li><a href="contact.jsp"><i class="fas fa-envelope"></i> Contact</a></li>
+                <% if (session.getAttribute("username") == null) { %>
+                <li><a href="login.jsp" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <% } else { %>
+                <li class="dropdown">
+                    <div class="user-profile">
+                        <img src="src/Home/img/user-icon.png" alt="User">
+                        <span><%= session.getAttribute("username") %></span>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="profile.jsp"><i class="fas fa-user"></i> My Profile</a>
+                        <a href="myreservations.jsp"><i class="fas fa-calendar-check"></i> My Reservations</a>
+                        <a href="login.jsp"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </li>
+                <% } %>
             </ul>
         </nav>
     </div>
 </header>
+
+<!-- Rest of your existing content remains the same -->
 
 <section id="showcase">
     <div class="container">
@@ -95,10 +170,10 @@
     <div class="container">
         <h2 class="section-title">What Our Guests Say</h2>
         <div class="testimonial">
-            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Customer">
+            <img src="src/Home/img/viraj.jpg" alt="Customer">
             <blockquote>
                 "The best dining experience I've had this year! The service was impeccable and the food was extraordinary."
-                <cite>- Sarah Johnson</cite>
+                <cite>- sanjeewa</cite>
             </blockquote>
         </div>
     </div>
@@ -125,9 +200,6 @@
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="copyright">
-            <p>Amali Restaurant &copy; 2023 | <a href="src/Home/Js/script.js">Privacy Policy</a> | <a href="terms.jsp">Terms of Service</a></p>
         </div>
     </div>
 </footer>
