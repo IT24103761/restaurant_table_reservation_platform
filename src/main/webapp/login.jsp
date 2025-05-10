@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Login - Amali Restaurant</title>
-    <link rel="stylesheet" href="src/Home/Css/auth.css">
+    <link rel="stylesheet" href="Authentication/CSS/auth.css">
 </head>
 <body>
 <div class="main-title"><span class="highlight">Amali</span> Restaurant</div>
@@ -21,8 +21,8 @@
         <button type="submit" class="button">Login</button>
     </form>
     <div class="link">
-        <p><a href="src/Home/Page/forgot-password.jsp">Forgot password?</a></p>
-        <p>Don't have an account? <a href="src/Home/Page/signup.jsp">Sign up</a></p>
+        <p><a href="Authentication/Page/forgot-password.jsp">Forgot password?</a></p>
+        <p>Don't have an account? <a href="Authentication/Page/signup.jsp">Sign up</a></p>
     </div>
 </div>
 

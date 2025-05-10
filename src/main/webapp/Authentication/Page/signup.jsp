@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Sign Up - Amali Restaurant</title>
-  <link rel="stylesheet" href="../Css/auth.css">
+  <link rel="stylesheet" href="../CSS/auth.css">
 </head>
 <body>
 <div class="main-title"><span class="highlight">Amali</span> Restaurant</div>
