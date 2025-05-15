@@ -99,7 +99,7 @@
           <p class="description">Fragrant basmati rice with chicken and vegetables</p>
           <p class="price">Rs. 1200.00</p>
         </div>
-        <form action="AddToOrder" method="post">
+        <form action="add-to-order" method="post">
           <input type="hidden" name="itemId" value="R001">
           <button type="submit" class="add-btn">+ Add</button>
         </form>
@@ -111,8 +111,8 @@
           <p class="description">Seasonal vegetables with aromatic spices</p>
           <p class="price">Rs. 900.00</p>
         </div>
-        <form action="AddToOrder" method="post">
-          <input type="hidden" name="itemId" value="R002">
+        <form action="add-to-order" method="post">
+          <input type="hidden" name="itemId" value="R001">
           <button type="submit" class="add-btn">+ Add</button>
         </form>
       </div>
@@ -123,7 +123,7 @@
           <p class="description">Classic fried rice with scrambled eggs</p>
           <p class="price">Rs. 850.00</p>
         </div>
-        <form action="AddToOrder" method="post">
+        <form action="add-to-order" method="post">
           <input type="hidden" name="itemId" value="R003">
           <button type="submit" class="add-btn">+ Add</button>
         </form>
@@ -142,7 +142,7 @@
           <p class="description">Chopped roti with chicken and spices</p>
           <p class="price">Rs. 1100.00</p>
         </div>
-        <form action="AddToOrder" method="post">
+        <form action="add-to-order" method="post">
           <input type="hidden" name="itemId" value="K001">
           <button type="submit" class="add-btn">+ Add</button>
         </form>
@@ -154,7 +154,7 @@
           <p class="description">Loaded with melted mozzarella cheese</p>
           <p class="price">Rs. 1300.00</p>
         </div>
-        <form action="AddToOrder" method="post">
+        <form action="add-to-order" method="post">
           <input type="hidden" name="itemId" value="K002">
           <button type="submit" class="add-btn">+ Add</button>
         </form>
@@ -166,7 +166,7 @@
           <p class="description">Fresh vegetables with chopped roti</p>
           <p class="price">Rs. 950.00</p>
         </div>
-        <form action="AddToOrder" method="post">
+        <form action="add-to-order" method="post">
           <input type="hidden" name="itemId" value="K003">
           <button type="submit" class="add-btn">+ Add</button>
         </form>
@@ -185,7 +185,7 @@
           <p class="description">Stir-fried noodles with chicken</p>
           <p class="price">Rs. 1000.00</p>
         </div>
-        <form action="AddToOrder" method="post">
+        <form action="add-to-order" method="post">
           <input type="hidden" name="itemId" value="N001">
           <button type="submit" class="add-btn">+ Add</button>
         </form>
@@ -197,7 +197,7 @@
           <p class="description">Mixed vegetables with noodles</p>
           <p class="price">Rs. 850.00</p>
         </div>
-        <form action="AddToOrder" method="post">
+        <form action="add-to-order" method="post">
           <input type="hidden" name="itemId" value="N002">
           <button type="submit" class="add-btn">+ Add</button>
         </form>
@@ -216,7 +216,7 @@
           <p class="description">Traditional coconut custard pudding</p>
           <p class="price">Rs. 600.00</p>
         </div>
-        <form action="AddToOrder" method="post">
+        <form action="add-to-order" method="post">
           <input type="hidden" name="itemId" value="D001">
           <button type="submit" class="add-btn">+ Add</button>
         </form>
@@ -228,7 +228,7 @@
           <p class="description">Warm chocolate cake with molten center</p>
           <p class="price">Rs. 800.00</p>
         </div>
-        <form action="AddToOrder" method="post">
+        <form action="add-to-order" method="post">
           <input type="hidden" name="itemId" value="D002">
           <button type="submit" class="add-btn">+ Add</button>
         </form>
@@ -240,7 +240,7 @@
           <p class="description">Vanilla ice cream with toppings</p>
           <p class="price">Rs. 700.00</p>
         </div>
-        <form action="AddToOrder" method="post">
+        <form action="add-to-order" method="post">
           <input type="hidden" name="itemId" value="D003">
           <button type="submit" class="add-btn">+ Add</button>
         </form>

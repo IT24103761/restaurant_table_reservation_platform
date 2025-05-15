@@ -1,0 +1,11 @@
+R001,Chicken Fried Rice,Rice,1200
+R002,Vegetable Rice,Rice,900
+R003,Egg Fried Rice,Rice,850
+K001,Chicken Kottu,Kottu,1100
+K002,Cheese Kottu,Kottu,1300
+K003,Vegetable Kottu,Kottu,950
+N001,Chicken Noodles,Noodles,1000
+N002,Vegetable Noodles,Noodles,850
+D001,Watalappan,Dessert,600
+D002,Chocolate Lava Cake,Dessert,800
+D003,Ice Cream Sundae,Dessert,700
