@@ -80,13 +80,14 @@
                 <li><a href="src/Home/Page/about.jsp"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="src/Home/Page/reservation.jsp"><i class="fas fa-calendar-alt"></i> Reservations</a></li>
                 <li><a href="contact.jsp"><i class="fas fa-envelope"></i> Contact</a></li>
-                <% if (session.getAttribute("username") == null) { %>
+                <% if (request.getSession().getAttribute("username") == null) { %>
                 <li><a href="login.jsp" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
                 <% } else { %>
                 <li class="dropdown">
                     <div class="user-profile">
                         <img src="src/Home/img/user-icon.png" alt="User">
-                        <span><%= session.getAttribute("username") %></span>
+                        <%@ page import="javax.servlet.http.HttpSession" %>
+                        <span><%= request.getSession().getAttribute("username") %></span>
                     </div>
                     <div class="dropdown-content">
                         <a href="profile.jsp"><i class="fas fa-user"></i> My Profile</a>
