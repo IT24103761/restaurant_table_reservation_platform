@@ -77,6 +77,7 @@
         <nav>
             <ul>
                 <li class="current"><a href="index.jsp"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="menu.jsp"><i class="fas fa-utensils"></i> Menu</a></li>
                 <li><a href="src/Home/Page/about.jsp"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="src/Home/Page/reservation.jsp"><i class="fas fa-calendar-alt"></i> Reservations</a></li>
                 <li><a href="contact.jsp"><i class="fas fa-envelope"></i> Contact</a></li>
