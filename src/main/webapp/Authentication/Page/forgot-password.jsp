@@ -9,7 +9,7 @@
 
 <div class="auth-box">
     <h2>Reset Password</h2>
-    <form action="ResetPasswordServlet" method="post" onsubmit="return validateReset()">
+    <form action="${pageContext.request.contextPath}/ResetPasswordServlet" method="post" onsubmit="return validateReset()">
         <div class="form-group">
             <label for="email">Registered Email:</label>
             <input type="email" id="email" name="email" required>

@@ -9,7 +9,7 @@
 
 <div class="auth-box">
     <h2>Login</h2>
-    <form action="LoginServlet" method="post">
+    <form action="${pageContext.request.contextPath}/LoginServlet" method="post">
         <div class="form-group">
             <label for="username">Username or Email:</label>
             <input type="text" id="username" name="username" required>

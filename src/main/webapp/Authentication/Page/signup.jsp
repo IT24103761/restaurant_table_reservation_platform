@@ -9,7 +9,7 @@
 
 <div class="auth-box">
   <h2>Create an Account</h2>
-  <form action="SignupServlet" method="post" onsubmit="return validateSignup()">
+  <form action="${pageContext.request.contextPath}/SignupServlet" method="post" onsubmit="return validateSignup()">
     <div class="form-group">
       <label for="fullname">Full Name:</label>
       <input type="text" id="fullname" name="fullname" required>
