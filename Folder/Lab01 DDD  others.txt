@@ -1,0 +1,149 @@
+-- =============================================================================
+-- SQL Data Retrieval and Filtering Exercises - Complete Solutions
+-- =============================================================================
+
+-- SECTION 1: Basic SELECT and WHERE Clauses
+-- =============================================================================
+
+-- (a) Retrieve all information of all employees
+SELECT * 
+FROM employees;
+
+-- (b) Display the names and salaries of employees who earn more than 50,000
+SELECT ename, salary 
+FROM employees 
+WHERE salary > 50000;
+
+-- (c) Find employees whose names start with the letter 'A'
+SELECT * 
+FROM employees 
+WHERE ename LIKE 'A%';
+
+-- (d) List the names and ages of employees younger than 30
+SELECT ename, age 
+FROM employees 
+WHERE age < 30;
+
+-- (e) Find the employees whose salary is between 20,000 and 60,000
+SELECT * 
+FROM employees 
+WHERE salary BETWEEN 20000 AND 60000;
+
+-- (f) Show employee names whose names contain the letter 'a'
+SELECT ename 
+FROM employees 
+WHERE ename LIKE '%a%';
+
+-- (g) Display the employee ID and name of those who are either aged 24 or 28
+SELECT eid, ename 
+FROM employees 
+WHERE age = 24 OR age = 28;
+-- Alternative using IN clause:
+-- SELECT eid, ename FROM employees WHERE age IN (24, 28);
+
+-- (h) Select employees whose age is not between 25 and 35
+SELECT * 
+FROM employees 
+WHERE age NOT BETWEEN 25 AND 35;
+
+-- (i) List all employees whose salary is not null
+SELECT * 
+FROM employees 
+WHERE salary IS NOT NULL;
+
+-- =============================================================================
+-- SECTION 2: ORDER BY Clauses
+-- =============================================================================
+
+-- (a) List all employees sorted by their name (ename)
+SELECT * 
+FROM employees 
+ORDER BY ename;
+
+-- (b) Show all employees sorted in descending order of salary
+SELECT * 
+FROM employees 
+ORDER BY salary DESC;
+
+-- (c) Display employee details ordered ascending by age and descending by salary
+SELECT * 
+FROM employees 
+ORDER BY age ASC, salary DESC;
+
+-- (d) Show all departments sorted by budget in descending order
+SELECT * 
+FROM departments 
+ORDER BY budget DESC;
+
+-- (e) List all work assignments ordered by pct time
+SELECT * 
+FROM works 
+ORDER BY pct_time;
+
+-- =============================================================================
+-- SECTION 3: Aggregate Functions (COUNT, SUM, AVG, MIN, MAX)
+-- =============================================================================
+
+-- (a) How many employees are in the organization?
+SELECT COUNT(*) AS total_employees 
+FROM employees;
+
+-- (b) What is the total salary paid to all employees?
+SELECT SUM(salary) AS total_salary 
+FROM employees;
+
+-- (c) What is the highest salary and the lowest salary among all employees?
+SELECT MAX(salary) AS highest_salary, MIN(salary) AS lowest_salary 
+FROM employees;
+
+-- (d) What is the average salary of employees?
+SELECT AVG(salary) AS average_salary 
+FROM employees;
+
+-- (e) How many employees are aged below 30?
+SELECT COUNT(*) AS employees_under_30 
+FROM employees 
+WHERE age < 30;
+
+-- (f) What is the total number of departments?
+SELECT COUNT(*) AS total_departments 
+FROM departments;
+
+-- (g) What is the maximum and minimum department budget?
+SELECT MAX(budget) AS max_budget, MIN(budget) AS min_budget 
+FROM departments;
+
+-- (h) What is the total percentage of work assigned across all employees?
+SELECT SUM(pct_time) AS total_work_percentage 
+FROM works;
+
+-- (i) What is the average work time (pct time) per employee?
+SELECT AVG(pct_time) AS average_work_time 
+FROM works;
+
+-- =============================================================================
+-- SECTION 4: GROUP BY Clauses
+-- =============================================================================
+
+-- (a) What is the total salary paid to employees of each age group?
+SELECT age, SUM(salary) AS total_salary 
+FROM employees 
+GROUP BY age 
+ORDER BY age;
+
+-- (b) Count the number of employees working in each department. 
+--     Rename the count as 'Number of Employees'
+SELECT did, COUNT(*) AS "Number of Employees" 
+FROM works 
+GROUP BY did;
+
+-- (c) How many employees earn a salary greater than 50,000?
+SELECT COUNT(*) AS high_earners 
+FROM employees 
+WHERE salary > 50000;
+
+-- (d) List all employees who earn more than 50,000, sorted by salary in ascending order
+SELECT * 
+FROM employees 
+WHERE salary > 50000 
+ORDER BY salary ASC;
