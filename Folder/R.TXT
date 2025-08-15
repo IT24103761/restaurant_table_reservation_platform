@@ -1,0 +1,90 @@
+Without using R, calculate this
+
+
+x <- c(1, 2, 3)
+x[1] / x[2]^3 - 1 + 2 * x[3] - x[2 - 1]
+
+Step-by-step:
+
+x = (1, 2, 3)
+→ x[1] = 1
+→ x[2] = 2
+→ x[3] = 3
+→ x[2 - 1] = x[1] = 1
+
+x[1] / x[2]^3 → 1 / (2^3) → 1 / 8 = 0.125
+
+0.125 - 1 = -0.875
+
+2 * x[3] = 2 * 3 = 6
+
+-0.875 + 6 = 5.125
+
+5.125 - x[1] = 5.125 - 1 = 4.125
+
+✅ Answer: 4.125
+
+
+
+
+
+2️⃣ Find how many numbers from 1 to 15 are exactly divisible by 3
+
+
+vec <- 1:15
+sum(vec %% 3 == 0)
+
+
+
+%% = remainder after division
+
+== 0 checks if divisible by 3
+
+sum(...) counts how many TRUE values.
+
+✅ Expected answer: 5 (3, 6, 9, 12, 15)
+
+
+
+
+
+
+
+3️⃣ Loop to find index of maximum value
+
+
+
+nums <- c(4, 8, 15, 3, 9)
+max_index <- 1
+for (i in 2:length(nums)) {
+  if (nums[i] > nums[max_index]) {
+    max_index <- i
+  }
+}
+print(max_index)
+
+
+
+
+
+This will give the position (index) of the biggest number in the vector.
+
+
+
+
+
+
+Without loop (easier way)
+
+
+
+nums <- c(4, 8, 15, 3, 9)
+max_index <- which.max(nums)
+print(max_index)
+
+
+
+
+
+which.max() gives the position of the largest value directly.
+
